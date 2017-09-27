@@ -362,6 +362,10 @@ function PMA_showAddIndexDialog(source_array, array_index, target_columns, col_i
 
         $(this).dialog('close');
     };
+	 button_options[PMA_messages.strPreviewSQL] = function () {
+		   var $form = $('#index_frm');
+        PMA_previewSQL($form);
+    };
     button_options[PMA_messages.strCancel] = function () {
         if (col_index >= 0) {
             // Handle state on 'Cancel'.
